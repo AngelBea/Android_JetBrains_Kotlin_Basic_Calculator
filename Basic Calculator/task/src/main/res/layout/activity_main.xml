@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/editText"
+        android:textColor="@android:color/background_dark"
+        android:layout_width="380dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="@dimen/margin_edit_text"
+        android:defaultValue=""
+        android:hint="@string/edit_text_hint"
+        android:inputType=""
+        android:textAlignment="viewEnd"
+        android:textSize="50sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:tag="@string/tag_edit_text"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/clearButton"
+        style="@style/buttonsBase.clearButton"
+        android:layout_width="290dp"
+        android:layout_marginStart="@dimen/margin_bounds"
+        android:layout_marginTop="@dimen/margin_button_top_row1"
+        app:layout_constraintTop_toBottomOf="@id/editText"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/divideButton"
+        style="@style/buttonsBase.operatorButton"
+        android:layout_marginTop="@dimen/margin_button_top_row1"
+        android:layout_marginEnd="@dimen/margin_bounds"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editText"
+        android:text="@string/divide"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/multiplyButton"
+        style="@style/buttonsBase.operatorButton.belowOperators"
+        android:layout_marginEnd="@dimen/margin_bounds"
+        app:layout_constraintTop_toBottomOf="@id/divideButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/multiply"
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/subtractButton"
+        style="@style/buttonsBase.operatorButton.belowOperators"
+        android:layout_marginEnd="@dimen/margin_bounds"
+        app:layout_constraintTop_toBottomOf="@id/multiplyButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/subtract"
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/addButton"
+        style="@style/buttonsBase.operatorButton.belowOperators"
+        android:layout_marginEnd="@dimen/margin_bounds"
+        app:layout_constraintTop_toBottomOf="@id/subtractButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/add"
+        />
+
+    <org.hyperskill.calculator.NumberButton
+        android:id="@+id/equalButton"
+        style="@style/buttonsBase.operatorButton.belowOperators"
+        android:layout_marginEnd="@dimen/margin_bounds"
+        app:layout_constraintTop_toBottomOf="@id/addButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/equal"
+        />
+
+    <org.hyperskill.calculator.NumberButton
+        android:id="@+id/button7"
+        style="@style/buttonsBase.numbersButton"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="@dimen/margin_bounds"
+        app:layout_constraintTop_toBottomOf="@id/clearButton"
+        android:text="@string/seven"
+        />
+
+    <org.hyperskill.calculator.NumberButton
+        android:id="@+id/button8"
+        style="@style/buttonsBase.numbersButton"
+        app:layout_constraintStart_toEndOf="@id/button7"
+        app:layout_constraintTop_toBottomOf="@id/clearButton"
+        android:text="@string/eight"/>
+
+    <org.hyperskill.calculator.NumberButton
+        android:id="@+id/button9"
+        style="@style/buttonsBase.numbersButton"
+        app:layout_constraintStart_toEndOf="@id/button8"
+        app:layout_constraintTop_toBottomOf="@id/clearButton"
+        android:text="@string/nine"/>
+
+    <org.hyperskill.calculator.NumberButton
+        android:id="@+id/button4"
+        style="@style/buttonsBase.numbersButton"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="@dimen/margin_bounds"
+        app:layout_constraintTop_toBottomOf="@id/button7"
+        android:text="@string/four"
+        />
+
+    <org.hyperskill.calculator.NumberButton
+        android:id="@+id/button5"
+        style="@style/buttonsBase.numbersButton"
+        app:layout_constraintStart_toEndOf="@id/button4"
+        app:layout_constraintTop_toBottomOf="@id/button8"
+        android:text="@string/five"/>
+
+    <org.hyperskill.calculator.NumberButton
+        android:id="@+id/button6"
+        style="@style/buttonsBase.numbersButton"
+        app:layout_constraintStart_toEndOf="@id/button5"
+        app:layout_constraintTop_toBottomOf="@id/button9"
+        android:text="@string/six"/>
+
+    <org.hyperskill.calculator.NumberButton
+        android:id="@+id/button1"
+        style="@style/buttonsBase.numbersButton"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="@dimen/margin_bounds"
+        app:layout_constraintTop_toBottomOf="@id/button4"
+        android:text="@string/one"
+        />
+
+    <org.hyperskill.calculator.NumberButton
+        android:id="@+id/button2"
+        style="@style/buttonsBase.numbersButton"
+        app:layout_constraintStart_toEndOf="@id/button1"
+        app:layout_constraintTop_toBottomOf="@id/button5"
+        android:text="@string/two"/>
+
+    <org.hyperskill.calculator.NumberButton
+        android:id="@+id/button3"
+        style="@style/buttonsBase.numbersButton"
+        app:layout_constraintStart_toEndOf="@id/button2"
+        app:layout_constraintTop_toBottomOf="@id/button6"
+        android:text="@string/three"/>
+
+    <org.hyperskill.calculator.NumberButton
+        android:id="@+id/button0"
+        style="@style/buttonsBase.numbersButton.zero"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/button1"
+        android:text="@string/zero"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/dotButton"
+        style="@style/buttonsBase.numbersButton"
+        app:layout_constraintStart_toEndOf="@id/button0"
+        app:layout_constraintTop_toBottomOf="@id/button3"
+        android:text="@string/dot"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

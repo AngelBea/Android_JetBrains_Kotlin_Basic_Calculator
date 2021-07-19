@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="margin_button_top_row1">35dp</dimen>
+    <dimen name="margin_bounds">5dp</dimen>
+    <dimen name="button_width">65dp</dimen>
+    <dimen name="button_height">65dp</dimen>
+    <dimen name="margin_edit_text">50dp</dimen>
+    <dimen name="padding_top_operator_button">300dp</dimen>
+</resources>
